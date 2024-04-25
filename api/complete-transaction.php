@@ -6,11 +6,18 @@ require_once '../includes/dbconn.php';
 $transactionJSON = file_get_contents('php://input');
 $transaction = json_decode($transactionJSON, true);
 
+if($transaction['customerEmail'] == ''){
+    $customerEmail = NULL;
+}
+else{
+    $customerEmail  = $transaction['customerEmail'];
+}
+
 $customerEmail  = $transaction['customerEmail'];
 $cashierID = $transaction['cashierId'];
 $items = $transaction['items'];
 
-if(empty($customerEmail) || empty($cashierID) || empty($items)) {
+if(empty($cashierID) || empty($items)) {
     http_response_code(400);
     echo "You must provide a customer email, cashier ID, and items.";
     exit();
