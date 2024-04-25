@@ -13,7 +13,7 @@ function reloadTable() {
 
     //populate table
 
-    fetch('/api/employees.php')
+    fetch('/4347proj-master/api/employees.php')
     .then(response => response.json())
     .then(employees => {
         employees.forEach(employee => {
@@ -29,11 +29,17 @@ function reloadTable() {
 
 }
 
-function confirmFire(employeeId, name) {    
+function confirmFire(employeeId, name) {
+    // Alert the user if the employee ID is not in the database
+    if(name == "No employee found with that ID."){
+        alert("No employee found with that ID");
+        return;
+    }
+
     conf = confirm('Are you sure you want to terminate employee #' + employeeId + " (" + name + ')?');
     
     if (conf) {
-        fetch('/api/remove-employee.php?employeeId=' + employeeId)
+        fetch('/4347proj-master/api/remove-employee.php?employeeId=' + employeeId)
         .then(response => response.text())
         .then(output => {alert(output); reloadTable();});
     }
@@ -43,8 +49,12 @@ function confirmFire(employeeId, name) {
 
 function startFire() {
     const employeeId = document.getElementById('employeeId').value;
-
-    fetch('/api/employee-name.php?employeeId=' + employeeId)
+    // Alert the user that they must enter an ID if they left the input field blank
+    if(employeeId == ""){
+        alert("You must enter an employee ID");
+        return;
+    }
+    fetch('/4347proj-master/api/employee-name.php?employeeId=' + employeeId)
     .then(response=>response.text())
     .then(name => confirmFire(employeeId, name));
 }
