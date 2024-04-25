@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Manage Personnel</title>
+		<link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/manage-personnel.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Manage Personnel</h1>
+			</header>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="cashier.html">Cashier Portal</a>
+				<a href="supplier.html">Supplier Portal</a>
+				<a href="manage-inventory.html">Manage Inventory</a>
+				<a href="manager_deliveries.php">Manage Delivery</a>
+				<a href="manage-personnel.html">Manage Personnel</a>
+				<a href="self-service.html">Employee Self-Service</a>
+			</nav>
+			<div class="content">
+        <table id = "personnel-table">
+          <thead>
+            <tr>
+              <th>Employee ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+					<input
+						type="number"
+						id="employeeId"
+						min="0"
+						step="1"
+						placeholder="Enter Employee ID"
+					/>
+					<button onclick="startFire()" class="fireEmployeeButton">
+						Remove Employee
+					</button>
+			</div>
+		</div>
+		<script src="scripts/manage-personnel.js"></script>
+	</body>
+</html>

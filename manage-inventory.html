@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager Inventory</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/manage-inventory.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Manage Inventory</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cashier.html">Cashier Portal</a>
+            <a href="supplier.html">Supplier Portal</a>
+            <a href="manage-inventory.html">Manage Inventory</a>
+            <a href="manager_deliveries.php">Manage Delivery</a>
+            <a href="manage-personnel.html">Manage Personnel</a>
+            <a href="self-service.html">Employee Self-Service</a>
+        </nav>
+        <div class="content">
+            <div class="search-area">
+                <label for="itemNameSearch">Search by item name:</label>
+                <input
+                    type="text"
+                    id="itemNameSearch"
+                    placeholder="Search for an item name">
+            </div>
+            <h3>Results</h3>
+            <table id="queryResults"></table>
+        </div>
+    </div>
+    <script src="scripts/manage-inventory.js"></script>
+</body>
+</html>

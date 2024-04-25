@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Employee Self-Service</title>
+		<link rel="stylesheet" href="styles/main.css" />
+		<link rel="stylesheet" href="styles/self-service.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Employee Self-Service</h1>
+			</header>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="cashier.html">Cashier Portal</a>
+				<a href="supplier.html">Supplier Portal</a>
+				<a href="manage-inventory.html">Manage Inventory</a>
+				<a href="manager_deliveries.php">Manage Delivery</a>
+				<a href="manage-personnel.html">Manage Personnel</a>
+				<a href="self-service.html">Employee Self-Service</a>
+			</nav>
+			<div class="content">
+				<h2>Get Your Employee Information</h2>
+				<form id="employeeForm">
+					<div>
+						<label for="employeeId">Employee ID:</label>
+						<input
+							type="text"
+							id="employeeId"
+							name="employeeId"
+							required
+						/>
+					</div>
+					<div>
+						<label for="passcode">Passcode:</label>
+						<input
+							type="password"
+							id="passcode"
+							name="passcode"
+							required
+						/>
+					</div>
+					<button
+						type="button"
+						class="btn-green"
+						onclick="getEmployeeInfo()"
+					>
+						Get Info
+					</button>
+				</form>
+				<div id="employeeInfo"></div>
+
+				<h2>Change Your Passcode</h2>
+				<form id="passcodeForm">
+					<div>
+						<label for="employeeId">Employee ID:</label>
+						<input
+							type="text"
+							id="employeeIdPasscode"
+							name="employeeId"
+							required
+						/>
+					</div>
+					<div>
+						<label for="oldPasscode">Old Passcode:</label>
+						<input
+							type="password"
+							id="oldPasscode"
+							name="oldPasscode"
+							required
+						/>
+					</div>
+					<div>
+						<label for="newPasscode">New Passcode:</label>
+						<input
+							type="password"
+							id="newPasscode"
+							name="newPasscode"
+							required
+						/>
+					</div>
+					<button
+						type="button"
+						class="btn-green"
+						onclick="changePasscode()"
+					>
+						Change Passcode
+					</button>
+				</form>
+			</div>
+		</div>
+		<script src="scripts/self-service.js"></script>
+	</body>
+</html>

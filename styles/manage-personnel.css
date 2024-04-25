@@ -1,0 +1,33 @@
+.content{
+    padding-top:50px;
+}
+table{
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    display: block;
+    max-height: 400px;
+	overflow-y: auto;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+thead{
+    position: sticky; top: 0;
+    background-color: white;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+button{
+    margin: 5px;
+    padding: 5px;
+    background-color: #d52d2a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}

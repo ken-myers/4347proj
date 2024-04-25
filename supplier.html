@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Supplier Portal</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/supplier.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Supplier Portal</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cashier.html">Cashier Portal</a>
+            <a href="supplier.html">Supplier Portal</a>
+            <a href="manage-inventory.html">Manage Inventory</a>
+            <a href="manager_deliveries.php">Manage Delivery</a>
+            <a href="manage-personnel.html">Manage Personnel</a>
+            <a href="self-service.html">Employee Self-Service</a>
+        </nav>
+        <div class = "content">
+        <div class="row">
+            <div class="column left">
+                <h2>Shipment Details</h2>
+                <form id="shipmentForm">
+                    <div>
+                        Supplier ID:
+                        <input type="number" id="supplierID" required />
+                    </div>
+                    <div>
+                        Manager ID:
+                        <input type="number" id="managerID" required />
+                    </div>
+                </form>
+
+                <h3>Add an item</h3>
+                <form id="addItemForm">
+                    <div>
+                        Item ID:
+                        <input type="text" id="itemId" required />
+                    </div>
+                    <div>
+                        Quantity:
+                        <input type="number" id="quantity" required min="1" />
+                    </div>
+                    <button type="button" class="addButton" onclick="addItem()">Add to Shipment</button>
+                </form>
+            </div>
+            <div class="column right">
+                <table id="shipmentTable">
+                    <thead>
+                        <tr>
+                            <th>Item ID</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Items dynamically populate here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button class="submitShipment" onclick="submitShipment()">Submit Shipment</button>
+    </div>
+    </div>
+    <script src="scripts/supplier.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+	font-family: Arial, sans-serif;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th,
+td {
+	padding: 8px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+.row {
+	display: flex;
+    height: 350px;
+}
+.column {
+	flex: 1;
+}
+.left {
+	padding-right: 20px;
+}
+.right {
+	padding-left: 20px;
+}
+
+thead{
+    position: sticky; top: 0;
+    background-color: white;
+}
+
+#transactionTable {
+	max-height: 100%;
+	overflow-y: auto;
+    display: block;
+    width:fit-content;
+}
+.addButton {
+	background-color: #f0f0f0;
+	color: black;
+	padding: 10px 20px;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+.completeTransaction {
+	background-color: green;
+	color: white;
+	padding: 15px 30px;
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+	display: block;
+	width: 50%;
+	margin: auto;
+    margin-top: 50px;
+	border-radius: 5px;
+}
+form > div {
+	margin-bottom: 10px;
+}
