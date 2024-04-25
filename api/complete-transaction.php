@@ -13,7 +13,6 @@ else{
     $customerEmail  = $transaction['customerEmail'];
 }
 
-$customerEmail  = $transaction['customerEmail'];
 $cashierID = $transaction['cashierId'];
 $items = $transaction['items'];
 
