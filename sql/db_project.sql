@@ -14,8 +14,8 @@ CREATE TABLE IF NOT EXISTS `Employee` (
   `f_name` VARCHAR(50) NOT NULL,
   `m_initial` VARCHAR(1) NULL DEFAULT NULL,
   `l_name` VARCHAR(50) NOT NULL,
-  'passcode' VARCHAR(25),
-  'salary' INT UNSIGNED NOT NULL DEFAULT 35000,
+  `passcode` VARCHAR(25),
+  `salary` INT UNSIGNED NOT NULL DEFAULT 35000,
   PRIMARY KEY (`emp_id`));
 
 #Cashier table
