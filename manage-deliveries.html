@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Delivery Confirmation/Amendment Screen</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/manage-deliveries.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Manager Delivery Confirmation Screen</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cashier.html">Cashier Portal</a>
+            <a href="supplier.html">Supplier Portal</a>
+            <a href="manage-inventory.html">Manage Inventory</a>
+            <a href="manage-deliveries.html">Manage Delivery</a>
+            <a href="manage-personnel.html">Manage Personnel</a>
+            <a href="self-service.html">Employee Self-Service</a>
+        </nav>
+
+        <div class="content">
+            <h3>Results</h3>
+            <table id="queryResults"></table>
+            <h3>Confirm Delivery</h3>
+            <input
+                type="number"
+                id="shipmentId"
+                min="1"
+                placeholder="Enter Shipment ID"
+            />
+            <input
+                type="number"
+                id="managerId"
+                min="1"
+                placeholder="Enter Manager ID"
+            />
+            <button onclick="confirmDelivery()" class="confirmDeliveryButton">
+                Confirm Delivery
+            </button>
+
+        </div>
+    </div>
+
+<script src="scripts/manage-deliveries.js"></script>
+
+</body>
+</html>

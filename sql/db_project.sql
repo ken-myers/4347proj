@@ -143,10 +143,10 @@ VALUES
 #Insert Employee data
 INSERT INTO `Employee`
 VALUES
-	ROW(1,'Jason','T','Brown'),
-	ROW(2,'Aaron','M','Nguyen'),
-	ROW(3,'Ben','E','King'),
-	ROW(4,'Luna','R','Davis');
+	ROW(1,'Jason','T','Brown','insidejob',50000),
+	ROW(2,'Aaron','M','Nguyen','password',35000),
+	ROW(3,'Ben','E','King','12345678',35000),
+	ROW(4,'Luna','R','Davis','gocowboys',50000);
     
 #Insert Cashier data
 INSERT INTO `Cashier`
