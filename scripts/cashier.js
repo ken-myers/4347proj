@@ -63,6 +63,21 @@ function completeTransaction() {
 }
 
 function displayOutput(output){
+  if(output.includes(" FOREIGN KEY (`customer_email`) ")){
+    output = "No customer found with that email address";
+  }
+
+  else if (output.includes("FOREIGN KEY (`item_id`) REFERENCES `Items` (`item_id`) ")){
+    output = "Transaction includes an invalid item ID";
+  }
+
+  else if (output.includes("FOREIGN KEY (`cash_id`) REFERENCES ")){
+    output = "No cashier found with that ID";
+  }
+
+  else if (output.includes(" BIGINT UNSIGNED value is out of range in '(`db_project`.`Items`.`stock` - ?)'")){
+    output = "Transaction includes an item with insufficient stock";
+  }
   alert(output);
 }
 
