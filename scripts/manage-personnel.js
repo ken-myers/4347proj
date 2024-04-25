@@ -13,7 +13,7 @@ function reloadTable() {
 
     //populate table
 
-    fetch('/4347proj-master/api/employees.php')
+    fetch('/api/employees.php')
     .then(response => response.json())
     .then(employees => {
         employees.forEach(employee => {
@@ -39,7 +39,7 @@ function confirmFire(employeeId, name) {
     conf = confirm('Are you sure you want to terminate employee #' + employeeId + " (" + name + ')?');
     
     if (conf) {
-        fetch('/4347proj-master/api/remove-employee.php?employeeId=' + employeeId)
+        fetch('/api/remove-employee.php?employeeId=' + employeeId)
         .then(response => response.text())
         .then(output => {alert(output); reloadTable();});
     }
@@ -54,7 +54,7 @@ function startFire() {
         alert("You must enter an employee ID");
         return;
     }
-    fetch('/4347proj-master/api/employee-name.php?employeeId=' + employeeId)
+    fetch('/api/employee-name.php?employeeId=' + employeeId)
     .then(response=>response.text())
     .then(name => confirmFire(employeeId, name));
 }
