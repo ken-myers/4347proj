@@ -29,9 +29,7 @@ fetch("/api/items.php")
 
 // Code to create the table
 function generateTableRows(data, filter) {
-for(var i in data){
-        console.log(data[i]);
-    }
+
 // Get the tableBody element from HTML body
 var tableBody = document.getElementById("queryResults");
 
@@ -46,8 +44,24 @@ if(filter != "") {
     });
 }
 
-// Generate the headers of the table
-var headers = Object.keys(data[0]);
+// Get the errorMessage element from the HTML body
+var errorMessage = document.getElementById("errorMessage");
+
+// Clear the previous error message
+errorMessage.innerHTML = "";
+
+// Attempt to generate the headers of the tables
+var headers;
+try{
+    headers = Object.keys(data[0]);
+}
+// The attempt results in an error if there are no items in the Items table matching the search name
+catch(error){
+    // Display that no items were found
+    errorMessage.innerHTML = "No items found.";
+    return;
+}
+
 //var headers = ["item_id", "name", "stock"];
 var headerRow = "<tr>";
 headers.forEach(function(header) {
@@ -66,3 +80,4 @@ data.forEach(function(row) {
     tableBody.innerHTML += rowData;
 });
 }
+
